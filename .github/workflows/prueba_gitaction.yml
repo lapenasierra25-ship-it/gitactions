@@ -6,9 +6,9 @@ on:
    
 jobs:
    mostrar_mensaje:
-   runs-on: ubuntu-latest
-   steps: 
-   - name: Escribir hola
-     run:
-        echo "Hola"
+      runs-on: ubuntu-latest
+      steps: 
+      - name: Escribir hola
+        run:
+           echo "Hola"
    
