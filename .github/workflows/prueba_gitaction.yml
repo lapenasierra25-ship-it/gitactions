@@ -1,0 +1,14 @@
+#Nombre del action
+name: Primer Github Action
+#Queremos que se ejecute cuando se haga un push
+on:
+   push:
+   
+jobs:
+   mostrar_mensaje:
+   runs-on: ubuntu-latest
+   steps: 
+   - name: Escribir hola
+     run:
+        echo "Hola"
+   
