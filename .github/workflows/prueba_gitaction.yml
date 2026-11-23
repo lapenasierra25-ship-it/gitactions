@@ -1,14 +1,22 @@
 #Nombre del action
-name: Primer Github Action
+name: Mostrar mensaje
 #Queremos que se ejecute cuando se haga un push
 on:
    push:
+   worlflow_dispatch:
    
 jobs:
    mostrar_mensaje:
       runs-on: ubuntu-latest
+      
       steps: 
       - name: Escribir hola
         run:
            echo "Hola"
-   
+      - name: Mostrar fecha y hora
+	run:
+	   echo "Fecha y hora: $(date '+%d/%m/%Y %H:%M:%S')" 
+	   echo "Fecha y hora (Madrid): $(TZ='Europe/Madrid' date '+%d/%m&/%Y %H:%M:%S')"
+
+      - name: Mostrar version java
+	run: java -version
